@@ -104,10 +104,7 @@ We use key engagement metrics to perform clustering:
 3. **Visualization**:
    - **PCA Visualization**: The reduced dimensions using PCA showed distinct clusters of users, allowing easy interpretation of the different segments.
 
-
----
-
-### Part 2: Code Explanation and Insights
+### Code Explanation and Insights
 
 #### Code Overview:
 
