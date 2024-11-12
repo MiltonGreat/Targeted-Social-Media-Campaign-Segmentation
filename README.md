@@ -2,21 +2,6 @@
 
 This project aims to segment users based on their engagement data from social media advertising campaigns. By leveraging clustering techniques, we can group users based on their interaction patterns, helping marketers understand different segments for more targeted advertising strategies.
 
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Dataset](#dataset)
-- [Objective](#objective)
-- [Features](#features)
-- [Project Workflow](#project-workflow)
-  - [Data Preprocessing](#data-preprocessing)
-  - [Feature Engineering](#feature-engineering)
-  - [Clustering](#clustering)
-  - [Cluster Evaluation](#cluster-evaluation)
-  - [Cluster Profiling](#cluster-profiling)
-- [Key Insights](#key-insights)
-- [Usage](#usage)
-- [License](#license)
-
 ## Project Overview
 
 In this project, we perform user segmentation based on their engagement data from social media ads. Using clustering algorithms like KMeans, we identify groups of users with similar engagement patterns, which can help optimize marketing strategies by focusing on key audience segments.
@@ -93,49 +78,6 @@ We use key engagement metrics to perform clustering:
 
 ## Key Insights
 
-1. **Optimal Number of Clusters**: 
-   - Based on the Elbow Method and silhouette score, the optimal number of clusters was found to be 3, each representing distinct engagement patterns.
-   
-2. **Cluster Profiles**:
-   - **Cluster 0**: High-engagement users with a relatively high **CLTV**, high **CTR**, and moderate **Total Spend**. These users are prime candidates for focused marketing efforts.
-   - **Cluster 1**: Users with moderate engagement but high ad spend. Targeting these users with more personalized campaigns could improve ROI.
-   - **Cluster 2**: Low-engagement users with low CLTV and ROI. These users may need less ad spend or more targeted efforts to increase engagement.
-
-3. **Visualization**:
-   - **PCA Visualization**: The reduced dimensions using PCA showed distinct clusters of users, allowing easy interpretation of the different segments.
-
-### Code Explanation and Insights
-
-#### Code Overview:
-
-The code is designed to segment users based on their engagement data from social media ads. Here's a breakdown of the process:
-
-1. **Data Cleaning**:
-   - The dataset is loaded, and missing values are handled by filling numerical columns with the median value and categorical columns with the mode.
-   - Outliers are removed using the IQR method, ensuring clean data for clustering.
-
-2. **Feature Engineering**:
-   - Key engagement-related features are derived:
-     - **CTR** (Click-through Rate)
-     - **ROAS** (Return on Ad Spend)
-     - **CLTV** (Customer Lifetime Value proxy)
-   - These derived metrics help create meaningful clusters based on user behavior.
-
-3. **Clustering**:
-   - **KMeans Clustering** is applied to segment users into clusters based on their engagement data.
-   - The **Elbow Method** is used to determine the optimal number of clusters by plotting SSE (sum of squared errors) for different numbers of clusters.
-   - The best cluster count is found to be 3, based on the Elbow Method and silhouette score.
-
-4. **Cluster Profiling**:
-   - Cluster 0: Users with high **CTR**, **CLTV**, and high engagement rates.
-   - Cluster 1: Moderate engagement users with high ad spend and **ROI**.
-   - Cluster 2: Low-engagement users with low **ROI** and **CLTV**.
-
-5. **PCA Visualization**:
-   - The clusters are visualized using PCA (Principal Component Analysis) to reduce the dimensionality to 2 components. This helps in understanding the spread and separability of the clusters.
-
-#### Key Insights from the Output:
-
 1. **Cluster Segmentation**:
    - The users were grouped into three distinct clusters based on engagement metrics like CTR, CLTV, and Total Spend.
    - The clusters provide valuable insights into user behavior, allowing targeted advertising for each group.
@@ -148,10 +90,6 @@ The code is designed to segment users based on their engagement data from social
    - **Cluster 1**: Moderate engagement, high spend users—opportunity to improve efficiency.
    - **Cluster 2**: Low-engagement users, possible candidates for reduced ad targeting.
 
-By leveraging these insights, marketers can adjust their strategies to focus on high-value users while potentially reducing ad spend on low-engagement segments.
-
----
-
-### Key Insights from the Output:
+### Source
 
 https://www.kaggle.com/datasets/jsonk11/social-media-advertising-dataset
